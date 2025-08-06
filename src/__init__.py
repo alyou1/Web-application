@@ -12,7 +12,10 @@ if PROJECT_ROOT not in sys.path:
 
 # Exemple : construire un chemin vers un fichier de config
 CONFIG_PATH = os.path.join(PROJECT_ROOT, 'config','config.json')
+DATA_PATH = os.path.join(PROJECT_ROOT, 'data')
+TEMPLATE_PATH = os.path.join(PROJECT_ROOT, 'templates')
+
 
 with open(CONFIG_PATH) as f:
     CONFIG = json.load(f)
-    #print(CONFIG)
+    print(CONFIG)

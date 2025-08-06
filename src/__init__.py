@@ -18,4 +18,4 @@ TEMPLATE_PATH = os.path.join(PROJECT_ROOT, 'templates')
 
 with open(CONFIG_PATH) as f:
     CONFIG = json.load(f)
-    print(CONFIG)
+    #print(CONFIG)

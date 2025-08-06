@@ -13,5 +13,5 @@ def index():
         nouveau = Utilisateur(nom=form.nom.data,prenom=form.prenom.data ,email=form.email.data)
         db.session.add(nouveau)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('utilisateurs'))
     return render_template('form.html', form=form)

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <h1>Utilisateurs enregistrés</h1>
+    <ul>
+        {% for user in utilisateurs %}
+            <li>{{ user.nom }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">← Retour au formulaire</a>
+</body>
+</html>

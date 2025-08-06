@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_migrate import Migrate
-from src.models import db
+from src.models import db,Admin
 from src import CONFIG
 
 def create_app():
@@ -15,6 +15,9 @@ def create_app():
         db.create_all()
 
     from web.api.inscription_formulaire import form_view
+    from web.api.connexion import connexion_view
+
     app.register_blueprint(form_view)
+    app.register_blueprint(connexion_view)
 
     return app

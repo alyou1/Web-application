@@ -3,7 +3,6 @@ from flask_migrate import Migrate
 from src.models import db
 from src import CONFIG
 
-
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = CONFIG['SQLALCHEMY_DATABASE_URI']
@@ -14,5 +13,8 @@ def create_app():
     Migrate(app,db)
     with app.app_context():
         db.create_all()
+
+    from web.api.inscription_formulaire import form_view
+    app.register_blueprint(form_view)
 
     return app

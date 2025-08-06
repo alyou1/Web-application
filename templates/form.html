@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire Utilisateur</title>
+</head>
+<body>
+    <h1>Ajouter un utilisateur</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.nom.label }} {{ form.nom() }}<br>
+        {{ form.prenom.label }} {{ form.prenom() }}<br>
+        {{ form.email.label }} {{ form.email() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
